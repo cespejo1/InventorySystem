@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carlosespejoinventorysystem.View_Controller.ModifyPartController">
+   <children>
+      <HBox layoutX="48.0" layoutY="14.0" prefHeight="39.0" prefWidth="529.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="185.0" text="Add Part" />
+            <RadioButton fx:id="inhouseToggle" mnemonicParsing="false" onAction="#inhouseToggleAction" prefHeight="39.0" prefWidth="185.0" text="In-House" />
+            <RadioButton fx:id="outsourcedToggle" mnemonicParsing="false" onAction="#outsourcedToggleAction" prefHeight="42.0" prefWidth="100.0" text="Outsourced" />
+         </children>
+      </HBox>
+      <GridPane layoutX="103.0" layoutY="53.0" prefHeight="120.0" prefWidth="212.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name" GridPane.rowIndex="1" />
+            <Label text="ID" />
+            <Label text="Inv" GridPane.rowIndex="2" />
+            <Label text="Price/Cost" GridPane.rowIndex="3" />
+            <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="partNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="inv" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="102.0" layoutY="165.0" prefHeight="52.0" prefWidth="417.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Max" />
+            <Label text="Min" GridPane.columnIndex="2" />
+            <TextField fx:id="maxField" prefHeight="32.0" prefWidth="102.0" GridPane.columnIndex="1" />
+            <TextField fx:id="minField" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="101.0" layoutY="200.0" prefHeight="52.0" prefWidth="212.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="149.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="149.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="machineID_CompanyNameLabel" text="Machine ID" />
+            <TextField fx:id="machineID" GridPane.columnIndex="1" />
+            <TextField fx:id="companyname" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="319.0" layoutY="286.0" prefHeight="27.0" prefWidth="196.0" spacing="15.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="27.0" prefWidth="75.0" text="Save" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="27.0" prefWidth="75.0" text="Cancel" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
